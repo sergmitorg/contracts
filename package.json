@@ -1,0 +1,22 @@
+{
+  "name": "@sergmitorg/contracts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "protoc -I ./contracts/proto ./contracts/proto/*.proto --ts_proto_out=./contracts/gen --ts_proto_opt=nestJs=true,package=omit"
+  },
+  "files": [
+    "proto", "gen"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/microservices": "^11.1.11",
+    "rxjs": "^7.8.2"
+  }
+}
