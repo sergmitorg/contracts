@@ -35,18 +35,18 @@ export const AUTH_V1_PACKAGE_NAME = "auth.v1";
 export interface AuthServiceClient {
   sendOtp(request: SendOtpRequest): Observable<SendOtpResponse>;
 
-  verifyOpt(request: VerifyOtpRequest): Observable<VerifyOtpResponse>;
+  verifyOtp(request: VerifyOtpRequest): Observable<VerifyOtpResponse>;
 }
 
 export interface AuthServiceController {
   sendOtp(request: SendOtpRequest): Promise<SendOtpResponse> | Observable<SendOtpResponse> | SendOtpResponse;
 
-  verifyOpt(request: VerifyOtpRequest): Promise<VerifyOtpResponse> | Observable<VerifyOtpResponse> | VerifyOtpResponse;
+  verifyOtp(request: VerifyOtpRequest): Promise<VerifyOtpResponse> | Observable<VerifyOtpResponse> | VerifyOtpResponse;
 }
 
 export function AuthServiceControllerMethods() {
   return function (constructor: Function) {
-    const grpcMethods: string[] = ["sendOtp", "verifyOpt"];
+    const grpcMethods: string[] = ["sendOtp", "verifyOtp"];
     for (const method of grpcMethods) {
       const descriptor: any = Reflect.getOwnPropertyDescriptor(constructor.prototype, method);
       GrpcMethod("AuthService", method)(constructor.prototype[method], method, descriptor);
