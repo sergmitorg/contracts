@@ -1,8 +1,12 @@
 {
   "name": "@sergmit/contracts",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergmitorg/contracts.git"
+  },
   "scripts": {
     "generate": "protoc -I ./proto ./proto/*.proto --ts_proto_out=./gen --ts_proto_opt=nestJs=true,package=omit"
   },
