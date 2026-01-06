@@ -1,6 +1,6 @@
 {
   "name": "@sergmit/contracts",
-  "version": "1.0.9",
+  "version": "1.0.13",
   "description": "",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -14,7 +14,8 @@
   },
   "files": [
     "proto",
-    "gen"
+    "gen",
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
